@@ -53,14 +53,14 @@
                         <a href="#"><span class="fa fa-tasks"></span> <span class="xn-text">Products</span></a>
                         <ul>
                             <li><a href="prd-po.html"><span class="fa fa-file-text-o"></span> Purchase Orders</a></li>
-                            <li class="active"><a href="prd-cust.html"><span class="fa fa-user"></span> Customers</a></li>
+                            <li><a href="prd-cust.html"><span class="fa fa-user"></span> Customers</a></li>
                             <li><a href="prd-mds.html"><span class="fa fa-th-large"></span> MDS</a></li>
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-check-square-o"></span> <span class="xn-text">Job Card</span></a>
                         <ul>
-                            <li><a href="jc-jc.html"><span class="fa fa-check-square-o"></span> Job Card</a></li>
+                            <li class="active"><a href="jc-jc.html"><span class="fa fa-check-square-o"></span> Job Card</a></li>
                             <li><a href="jc-cf.html"><span class="fa fa-cut"></span> Cutting & Fusing</a></li>
                             <li><a href="jc-lc.html"><span class="fa fa-random"></span> Lining Cutting</a></li>
                             <li><a href="jc-st.html"><span class="fa fa-home"></span> Store</a></li>
@@ -380,100 +380,458 @@
 
                 <!-- PAGE TITLE -->
                 <div class="page-title">
-                    <h2><span class="fa fa-arrow-circle-o-left"></span> Customers</h2>
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Job Card</h2>
                 </div>
                 <!-- END PAGE TITLE -->
 
                 <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
 
+
+
+
+
+
+
+
+
+
+
+
                     <div class="row">
                         <div class="col-md-12">
 
-                            <!-- START DEFAULT DATATABLE -->
-                            <div class="panel panel-default">
+                            <!-- START PRIMARY PANEL -->
+                            <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Customers</h3>
-                                    <ul class="panel-controls">
-                                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
-                                        <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
-                                        <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
-                                    </ul>
+                                    <h3 class="panel-title">Job card details</h3>
                                 </div>
                                 <div class="panel-body">
-                                    <table class="table datatable">
-                                        <thead>
-                                            <tr>
-                                                <th>Logo</th>
-                                                <th>Name</th>
-                                                <th>Code</th>
-                                                <th>Website</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Primary Contact</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><span class="fa fa-user"></span></td>
-                                                <td>GLOOMY DI ESPOSITO LUCIO</td>
-                                                <td>CST001</td>
-                                                <td>www.GLOOMY.com</td>
-                                                <td>info@GLOOMY.com</td>
-                                                <td>917 633 2387</td>
-                                                <td>Hui Ling</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="fa fa-user"></span></td>
-                                                <td>NASTRIFICIO RESEGONE</td>
-                                                <td>CST002</td>
-                                                <td>www.RESEGONE.com</td>
-                                                <td>info@RESEGONE.com</td>
-                                                <td>917 876 5498</td>
-                                                <td>Andreea</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="fa fa-user"></span></td>
-                                                <td>GLOBE SRL BUYING OFFICE</td>
-                                                 <td>CST003</td>
-                                                <td>www.GLOBESRL.com</td>
-                                                <td>info@GLOOMY.com</td>
-                                                <td>917 393 3469</td>
-                                                <td>Albert</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="fa fa-user"></span></td>
-                                                <td>DANI SPA</td>
-                                               <td>CST004</td>
-                                                <td>www.DANI.com</td>
-                                                <td>info@GLOOMY.com</td>
-                                                <td>917 456 6538</td>
-                                                <td>Iana</td>
-                                            <tr>
-                                                <td><span class="fa fa-user"></span></td>
-                                                <td>D'ARIENZO SRL</td>
-                                                <td>CST005</td>
-                                                <td>www.ARIENZO.com</td>
-                                                <td>info@GLOOMY.com</td>
-                                                <td>917 874 2357</td>
-                                                <td>Einav</td>
-                                            </tr>
-                                            <tr>
-                                                <td><i class="fa fa-user"></i></td>
-                                                <td>LUXURY & LEATHER</td>
-                                                <td>CST006</td>
-                                                <td>www.LUXURY.com</td>
-                                                <td>info@GLOOMY.com</td>
-                                                <td>917 247 9864</td>
-                                                <td>Sigal</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label>Job card #:</label>
+                                            <select class="form-control select">
+                                                <option>JC000001</option>
+                                                <option>JC000002</option>
+                                                <option>JC000003</option>
+                                                <option>JC000004</option>
+                                                <option>JC000005</option>
+                                            </select>
+                                            <span class="help-block">Select job card number</span>
+
+                                            <label>Delivery date:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                <input type="text" class="form-control datepicker" value="2017-05-22">
+                                            </div>
+                                            <span class="help-block">Order delivery date</span>
+
+                                            <label>Order completeness:</label>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                    60% Complete (Tailoring)
+                                                </div>
+                                            </div>
+                                            <span class="help-block">Order is in Tailoring stage</span>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label>Invoice #:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                                <input type="text" class="form-control" value="INV-1002"/>
+                                            </div>
+                                            <span class="help-block">PO Invoice number</span>
+
+                                            <label>Order date:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                <input type="text" class="form-control datepicker" value="2017-04-20">
+                                            </div>
+                                            <span class="help-block">Order start date</span>
+
+                                            <label>Delivery date:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                <input type="text" class="form-control datepicker" value="2017-05-22">
+                                            </div>
+                                            <span class="help-block">Order delivery date</span>
+
+                                            <label>Customer:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                                <input type="text" class="form-control" value="NASTRIFICIO RESEGONE"/>
+                                            </div>
+                                            <span class="help-block">PO Invoice number</span>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="col-md-4">
+                                                <div class="widget widget-success widget-item-icon">
+                                                    <div class="widget-item-left">
+                                                        <span class="fa fa-heart"></span>
+                                                    </div>
+                                                    <div class="widget-data">
+                                                        <div class="widget-int num-count">Jacket</div>
+                                                        <div class="widget-title">Style</div>
+                                                        <div class="widget-subtitle">Class A</div>
+                                                    </div>
+                                                    <div class="widget-controls">
+                                                        <a href="#" class="widget-control-right"><span class="fa fa-times"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="widget widget-info widget-item-icon">
+                                                    <div class="widget-item-left">
+                                                        <span class="fa fa-puzzle-piece"></span>
+                                                    </div>
+                                                    <div class="widget-data">
+                                                        <div class="widget-int num-count">Napa</div>
+                                                        <div class="widget-title">Leather</div>
+                                                        <div class="widget-subtitle">Mark 1</div>
+                                                    </div>
+                                                    <div class="widget-controls">
+                                                        <a href="#" class="widget-control-right"><span class="fa fa-times"></span></a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="widget widget-danger widget-item-icon">
+                                                    <div class="widget-item-left">
+                                                        <span class="fa fa-magic"></span>
+                                                    </div>
+                                                    <div class="widget-data">
+                                                        <div class="widget-int num-count">Red</div>
+                                                        <div class="widget-title">Color</div>
+                                                        <div class="widget-subtitle">Shade 1</div>
+                                                    </div>
+                                                    <div class="widget-controls">
+                                                        <a href="#" class="widget-control-right"><span class="fa fa-times"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Back</button>
+                                    <button class="btn btn-primary pull-right">Submit</button>
                                 </div>
                             </div>
-                            <!-- END DEFAULT DATATABLE -->
+                            <!-- END PRIMARY PANEL -->
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <!-- START PRIMARY PANEL -->
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Cutting & Fusing</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label>Date:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                        <input type="text" class="form-control datepicker" value="2017-05-22">
+                                    </div>
+                                    <span class="help-block">Work done on date</span>
+
+                                    <label>Matcher:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Select matcher from people list</span>
+
+                                    <label>Cutter:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Select cutter from people list</span>
+
+                                    <label>Fuser:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Select fuser from people list</span>
+
+
+                                    <label>Remarks:</label>
+                                    <textarea class="form-control" rows="5"></textarea>
+                                    <span class="help-block">Worker remarks</span>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Back</button>
+                                    <button class="btn btn-primary pull-right">Submit</button>
+                                </div>
+                            </div>
+                            <!-- END PRIMARY PANEL -->
+                        </div>
+
+                        <div class="col-md-2">
+                            <!-- START PRIMARY PANEL -->
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Lining Cutting</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label>Date:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                        <input type="text" class="form-control datepicker" value="2017-05-22">
+                                    </div>
+                                    <span class="help-block">Work done on date</span>
+
+                                    <label>Cutter:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Select cutter from people list</span>
+
+                                    <label>Remarks:</label>
+                                    <textarea class="form-control" rows="5"></textarea>
+                                    <span class="help-block">Worker remarks</span>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Back</button>
+                                    <button class="btn btn-primary pull-right">Submit</button>
+                                </div>
+                            </div>
+                            <!-- END PRIMARY PANEL -->
+                        </div>
+
+                        <div class="col-md-2">
+                            <!-- START PRIMARY PANEL -->
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Store</h3>
+                                </div>
+                                <div class="panel-body">
+                                   <label>Date:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                        <input type="text" class="form-control datepicker" value="2017-05-22">
+                                    </div>
+                                    <span class="help-block">Work done on date</span>
+
+                                    <label>Material:</label>
+                                    <select class="form-control select">
+                                        <option>Buttons</option>
+                                        <option>Calfs</option>
+                                        <option>Threads</option>
+                                        <option>Cusion</option>
+                                        <option>Line</option>
+                                    </select>
+                                    <span class="help-block">Material required for job card</span>
+
+                                    <label>Issued by:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Material issued by</span>
+
+                                    <label>Received by:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Material received by</span>
+
+                                    <label>Remarks:</label>
+                                    <textarea class="form-control" rows="5"></textarea>
+                                    <span class="help-block">Worker remarks</span>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Back</button>
+                                    <button class="btn btn-primary pull-right">Submit</button>
+                                </div>
+                            </div>
+                            <!-- END PRIMARY PANEL -->
+                        </div>
+
+                        <div class="col-md-2">
+                            <!-- START PRIMARY PANEL -->
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Tailoring</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label>Date:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                        <input type="text" class="form-control datepicker" value="2017-05-22">
+                                    </div>
+                                    <span class="help-block">Work done on date</span>
+
+                                    <label>Tailor:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Select tailor from people list</span>
+
+                                    <label>Line QC:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Select line QC from people list</span>
+
+                                    <label>Status:</label>
+                                    <select class="form-control select">
+                                        <option>OK</option>
+                                        <option>Alteration</option>
+                                    </select>
+                                    <span class="help-block">Select status</span>
+
+
+                                    <label>Remarks:</label>
+                                    <textarea class="form-control" rows="5"></textarea>
+                                    <span class="help-block">Worker remarks</span>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Back</button>
+                                    <button class="btn btn-primary pull-right">Submit</button>
+                                </div>
+                            </div>
+                            <!-- END PRIMARY PANEL -->
+                        </div>
+
+                        <div class="col-md-2">
+                            <!-- START PRIMARY PANEL -->
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Inspection</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label>Date:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                        <input type="text" class="form-control datepicker" value="2017-05-22">
+                                    </div>
+                                    <span class="help-block">Work done on date</span>
+
+                                    <label>QC dony by:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">QC done by person</span>
+
+                                    <label>Status:</label>
+                                    <select class="form-control select">
+                                        <option>OK</option>
+                                        <option>Alteration</option>
+                                    </select>
+                                    <span class="help-block">Select status</span>
+
+
+                                    <label>Remarks:</label>
+                                    <textarea class="form-control" rows="5"></textarea>
+                                    <span class="help-block">Worker remarks</span>
+
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Back</button>
+                                    <button class="btn btn-primary pull-right">Submit</button>
+                                </div>
+                            </div>
+                            <!-- END PRIMARY PANEL -->
+                        </div>
+
+                        <div class="col-md-2">
+                            <!-- START PRIMARY PANEL -->
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Packing</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label>Date:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                        <input type="text" class="form-control datepicker" value="2017-05-22">
+                                    </div>
+                                    <span class="help-block">Work done on date</span>
+
+                                    <label>Packed by:</label>
+                                    <select class="form-control select">
+                                        <option>Kumar</option>
+                                        <option>Saleem</option>
+                                        <option>David</option>
+                                        <option>Antony</option>
+                                        <option>Veer</option>
+                                    </select>
+                                    <span class="help-block">Packing doone by person</span>
+
+                                    <label>Status:</label>
+                                    <select class="form-control select">
+                                        <option>OK</option>
+                                        <option>Alteration</option>
+                                    </select>
+                                    <span class="help-block">Select status</span>
+
+
+                                    <label>Remarks:</label>
+                                    <textarea class="form-control" rows="5"></textarea>
+                                    <span class="help-block">Worker remarks</span>
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Back</button>
+                                    <button class="btn btn-primary pull-right">Submit</button>
+                                </div>
+                            </div>
+                            <!-- END PRIMARY PANEL -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
 
                 </div>
                 <!-- PAGE CONTENT WRAPPER -->
@@ -518,7 +876,10 @@
         <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
         <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-        <script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+       <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-file-input.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
         <!-- END PAGE PLUGINS -->
 
         <!-- START TEMPLATE -->
