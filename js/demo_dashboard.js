@@ -69,11 +69,11 @@ $(function(){
     Morris.Donut({
         element: 'dashboard-donut-1',
         data: [
-            {label: "Returned", value: 2513},
-            {label: "New", value: 764},
-            {label: "Registred", value: 311}
+            {label: "Completed", value: 200},
+            {label: "OnHold", value: 50},
+            {label: "Cancelled", value: 10}
         ],
-        colors: ['#33414E', '#1caf9a', '#FEA223'],
+        colors: ['#8baf4f', '#fea223', '#d94a49'],
         resize: true
     });
     /* END Donut dashboard chart */
@@ -83,18 +83,18 @@ $(function(){
     Morris.Bar({
         element: 'dashboard-bar-1',
         data: [
-            { y: 'Oct 10', a: 75, b: 35 },
-            { y: 'Oct 11', a: 64, b: 26 },
-            { y: 'Oct 12', a: 78, b: 39 },
-            { y: 'Oct 13', a: 82, b: 34 },
-            { y: 'Oct 14', a: 86, b: 39 },
-            { y: 'Oct 15', a: 94, b: 40 },
-            { y: 'Oct 16', a: 96, b: 41 }
+            { y: 'Apr 23', a: 75, b: 35 },
+            { y: 'Apr 24', a: 64, b: 26 },
+            { y: 'Apr 25', a: 78, b: 39 },
+            { y: 'Apr 26', a: 82, b: 34 },
+            { y: 'Apr 27', a: 86, b: 39 },
+            { y: 'Apr 28', a: 94, b: 40 },
+            { y: 'Apr 29', a: 96, b: 41 }
         ],
         xkey: 'y',
         ykeys: ['a', 'b'],
-        labels: ['New Users', 'Returned'],
-        barColors: ['#33414E', '#1caf9a'],
+        labels: ['Completed', 'InProgress'],
+        barColors: ['#8baf4f', '#fea223'],
         gridTextSize: '10px',
         hideHover: true,
         resize: true,
