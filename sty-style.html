@@ -3,7 +3,7 @@
 
 <head>
     <!-- META SECTION -->
-    <title>Fulls MDS</title>
+    <title>Joli Admin - Responsive Bootstrap Admin Template</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,20 +55,20 @@
                     <a href="#"><span class="fa fa-tasks"></span> <span class="xn-text">Products</span></a>
                     <ul>
                         <li><a href="prd-po.html"><span class="fa fa-file-text-o"></span> Purchase Orders</a></li>
-                        <li><a href="prd-cust.html"><span class="fa fa-user"></span> Customers</a></li>
-                        <li class="active"><a href="prd-mds.html"><span class="fa fa-th-large"></span> MDS</a></li>
+                        <li class="active"><a href="prd-cust.html"><span class="fa fa-user"></span> Customers</a></li>
+                        <li><a href="prd-mds.html"><span class="fa fa-th-large"></span> MDS</a></li>
                     </ul>
                 </li>
                 <li class="xn-openable">
                     <a href="#"><span class="fa fa-check-square-o"></span> <span class="xn-text">Job Card</span></a>
                     <ul>
-                        <li><a href="#"><span class="fa fa-check-square-o"></span> Job Card</a></li>
-                        <li><a href="#"><span class="fa fa-cut"></span> Cutting & Fusing</a></li>
-                        <li><a href="#"><span class="fa fa-random"></span> Lining Cutting</a></li>
-                        <li><a href="#"><span class="fa fa-home"></span> Store</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-pushpin"></span> Tailoring</a></li>
-                        <li><a href="#"><span class="fa fa-search"></span> Inspection</a></li>
-                        <li><a href="#"><span class="fa fa-briefcase"></span> Packing</a></li>
+                        <li><a href="jc-jc.html"><span class="fa fa-check-square-o"></span> Job Card</a></li>
+                        <li><a href="jc-cf.html"><span class="fa fa-cut"></span> Cutting & Fusing</a></li>
+                        <li><a href="jc-lc.html"><span class="fa fa-random"></span> Lining Cutting</a></li>
+                        <li><a href="jc-st.html"><span class="fa fa-home"></span> Store</a></li>
+                        <li><a href="jc-tr.html"><span class="glyphicon glyphicon-pushpin"></span> Tailoring</a></li>
+                        <li><a href="jc-in.html"><span class="fa fa-search"></span> Inspection</a></li>
+                        <li><a href="jc-pk.html"><span class="fa fa-briefcase"></span> Packing</a></li>
                     </ul>
                 </li>
 
@@ -377,14 +377,13 @@
             <!-- START BREADCRUMB -->
             <ul class="breadcrumb">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li class="active">MDS</li>
+                <li class="active">Style</li>
             </ul>
             <!-- END BREADCRUMB -->
 
             <!-- PAGE TITLE -->
             <div class="page-title">
-                <h2><span class="fa fa-arrow-circle-o-left"></span>MDS</h2>
+                <h2><span class="fa fa-arrow-circle-o-left"></span>Style</h2>
             </div>
             <!-- END PAGE TITLE -->
 
@@ -392,12 +391,12 @@
             <div class="page-content-wrap">
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
 
                         <!-- START DEFAULT DATATABLE -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Master Data Sheet</h3>
+                                <h3 class="panel-title">Style</h3>
                                 <ul class="panel-controls">
                                     <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                     <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
@@ -405,245 +404,148 @@
                                 </ul>
                             </div>
                             <div class="panel-body">
-                                <table class="table table-bordered">
+                                <table class="table datatable">
                                     <thead>
                                         <tr>
-                                            <th>PO</th>
-                                            <th>Style</th>
-                                            <th>Color</th>
-                                            <th>Del Date</th>
-                                            <th>Ord Qty</th>
-                                            <th>In Cutting</th>
-                                            <th>In Store</th>
-                                            <th>In Tailoring</th>
-                                            <th>Under alteration</th>
-                                            <th>In Final Inspection</th>
-                                            <th>In Packing</th>
-                                            <th>Shipped Qty</th>
-                                            <th>Bal to Ship</th>
+                                            <th>Photo</th>
+                                            <th>Title</th>
+                                            <th>Leather</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>0023</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2017</td>
-                                            <td class="info">150</td>
-                                            <td class="success">20</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">0</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
-
-                                        </tr>
-
-                                        <tr>
-                                            <td>0023</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2018</td>
-                                            <td class="info">100</td>
-                                            <td class="success">30</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">0</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
-
+                                            <td><span class="fa fa-user"></span></td>
+                                            <td>Full-grain</td>
+                                            <td>Chrome-tanned leather</td>
 
                                         </tr>
                                         <tr>
-                                            <td>0023</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2019</td>
-                                            <td class="info">200</td>
-                                            <td class="success">50</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">1</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>0023</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2020</td>
-                                            <td class="info">300</td>
-                                            <td class="success">10</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">1</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
-
+                                            <td><span class="fa fa-user"></span></td>
+                                            <td>Top-grain</td>
+                                            <td>Chrome-tanned leather</td>
 
                                         </tr>
                                         <tr>
-                                            <td>0023</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2021</td>
-                                            <td class="info">100</td>
-                                            <td class="success">40</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">1</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
-
-
-                                        </tr>
-                                        <tr style="font-weight: bold;">
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Sub Total</td>
-                                            <td>850</td>
-                                            <td>150</td>
-                                            <td>350</td>
-                                            <td>75</td>
-                                            <td>25</td>
-                                            <td>3</td>
-                                            <td>50</td>
-                                            <td>250</td>
-                                            <td>750</td>
+                                            <td><span class="fa fa-user"></span></td>
+                                            <td>Top-grain</td>
+                                            <td>Formaldehyde</td>
 
                                         </tr>
                                         <tr>
-                                            <td>0028</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2022</td>
-                                            <td class="info">200</td>
-                                            <td class="success">30</td>
-                                            <td class="success">50</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">0</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
+                                            <td><span class="fa fa-user"></span></td>
+                                            <td>Full-grain</td>
+                                            <td>Formaldehyde</td>
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <td><span class="fa fa-user"></span></td>
+                                            <td>Corrected-grainL</td>
+                                            <td>Rawhide </td>
+
                                         </tr>
                                         <tr>
-                                            <td>0028</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2023</td>
-                                            <td class="info">200</td>
-                                            <td class="success">30</td>
-                                            <td class="success">50</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">0</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
+                                            <td><i class="fa fa-user"></i></td>
+                                            <td>Split</td>
+                                            <td>Rawhide </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END DEFAULT DATATABLE -->
+
+                        <!-- START DEFAULT DATATABLE -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Color</h3>
+                                <ul class="panel-controls">
+                                    <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                    <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Red</td>
                                         </tr>
                                         <tr>
-                                            <td>0028</td>
-                                            <td>ELS</td>
                                             <td>Black</td>
-                                            <td>4-Mar-2024</td>
-                                            <td class="info">200</td>
-                                            <td class="success">20</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">1</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
                                         </tr>
                                         <tr>
-                                            <td>0028</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2025</td>
-                                            <td class="info">200</td>
-                                            <td class="success">20</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">0</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
+                                            <td>Brown</td>
                                         </tr>
                                         <tr>
-                                            <td>0028</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2026</td>
-                                            <td class="info">200</td>
-                                            <td class="success">10</td>
-                                            <td class="success">70</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">0</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
+                                            <td>Yellow</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Dark Brown</td>
                                         </tr>
                                         <tr>
-                                            <td>0028</td>
-                                            <td>ELS</td>
-                                            <td>Black</td>
-                                            <td>4-Mar-2027</td>
-                                            <td class="info">200</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="success">15</td>
-                                            <td class="success">5</td>
-                                            <td class="success">1</td>
-                                            <td class="success">10</td>
-                                            <td class="success">50</td>
-                                            <td class="warning">150</td>
+                                            <td>Dark ssYellow</td>
                                         </tr>
-                                        <tr  style="font-weight: bold;">
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Sub Total</td>
-                                            <td>1200</td>
-                                            <td>120</td>
-                                            <td>500</td>
-                                            <td>90</td>
-                                            <td>30</td>
-                                            <td>2</td>
-                                            <td>60</td>
-                                            <td>300</td>
-                                            <td>900</td>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END DEFAULT DATATABLE -->
+
+                        <!-- START DEFAULT DATATABLE -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Material</h3>
+                                <ul class="panel-controls">
+                                    <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                    <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Title</th>
+
+
                                         </tr>
-                                        <tr  style="font-weight: bold;">
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Grand Total</td>
-                                            <td>2050</td>
-                                            <td>270</td>
-                                            <td>850</td>
-                                            <td>165</td>
-                                            <td>55</td>
-                                            <td>5</td>
-                                            <td>110</td>
-                                            <td>550</td>
-                                            <td>1650</td>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Full-grain</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Top-grain</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Top-grain</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Full-grain</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Corrected-grainL</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>Split</td>
+
+
                                         </tr>
                                     </tbody>
                                 </table>
@@ -651,6 +553,108 @@
                         </div>
                         <!-- END DEFAULT DATATABLE -->
                     </div>
+                    <div class="col-md-6">
+
+                        <!-- START DEFAULT DATATABLE -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Leather</h3>
+                                <ul class="panel-controls">
+                                    <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                    <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Color</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Chrome-tanned leather</td>
+                                            <td>Red</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chrome-tanned leather</td>
+                                            <td>Yellow</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Formaldehyde</td>
+                                            <td>Brown</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Formaldehyde</td>
+                                            <td>Black</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END DEFAULT DATATABLE -->
+
+                        <!-- START DEFAULT DATATABLE -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Size</h3>
+                                <ul class="panel-controls">
+                                    <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                    <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Title</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <td>2x3</td>
+
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>4x3</td>
+
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>4x8</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>10x5</td>
+
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END DEFAULT DATATABLE -->
+
+                    </div>
+
+
+
+
                 </div>
 
             </div>
