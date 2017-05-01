@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META SECTION -->
+        <title>TITLE</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+
+        <!-- CSS INCLUDE -->
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+
+        <style>
+
+        .chart div {
+          font: 10px sans-serif;
+          background-color: steelblue;
+          text-align: right;
+          padding: 3px;
+          margin: 1px;
+          color: white;
+        }
+
+        .chart2 rect {
+          fill: red;
+        }
+
+        .chart2 text {
+          fill: white;
+          font: 10px sans-serif;
+          text-anchor: end;
+        }
+
+        </style>
+
+        <!-- EOF CSS INCLUDE -->
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="index.html">Joli Admin</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li class="xn-title">Navigation</li>
+                    <li>
+                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+                    </li>
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Link</a></li>
+                    <li class="active">Active</li>
+                </ul>
+                <!-- END BREADCRUMB -->
+
+                <div class="page-title">
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> D3 Test</h2>
+                </div>
+
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">D3 Test</h3>
+                                </div>
+                                <div class="panel-body">
+
+                                    <div id="chart1" class="chart">
+                                    </div>
+
+                                    <svg id="chart2" class="chart2">
+                                    </svg>
+
+                                    <svg id="chart3" class="chart2">
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->
+            </div>
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->
+
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <!-- END PLUGINS -->
+
+        <!-- THIS PAGE PLUGINS -->
+        <script type="text/javascript" src="js/plugins/rickshaw/d3.v3.js"></script>
+        <!-- END PAGE PLUGINS -->
+
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/actions.js"></script>
+        <!-- END TEMPLATE -->
+
+        <script>
+
+        $(function(){
+
+            //alert('hi');
+
+            var data = [4,8,15,16,23,42];
+
+            var x = d3.scale.linear().domain([0, d3.max(data)]).range([0, 420]);
+
+            //1. select chart container
+            var chart = d3.select("#chart1");
+
+            //2. initiate data join to which we will join data
+            var bar = chart.selectAll("div");
+
+            //3.join the data
+            var barUpdate = bar.data(data);
+
+            //4. handle enter selection which represent new data
+            // update and exit selection is empty because the selection is empty
+            var barEnter = barUpdate.enter().append("div");
+
+            //5. set width of each bar
+            barEnter.style("width", function(d) { return x(d) + "px" });
+
+            //6. set text content for each bar
+            barEnter.text(function(d) { return d; });
+
+            //all these can be written in one line
+            //d3.select(".chart").selectAll("div").data(data).enter().append("div").style("width", function(d) { return d * 10 + "px"; }).text(function(d) { return d; });
+
+            //
+            //SVG chart 1
+            //
+            var width = 420, barHeight = 20;
+
+            var chart2 = d3.select("#chart2").attr("width", width).attr("height", barHeight * data.length);
+
+            var bar2 = chart2.selectAll("g").data(data).enter().append("g").attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+            bar2.append("rect").attr("width", x).attr("height", barHeight - 1);
+
+            bar2.append("text").attr("x", function(d) { return x(d) - 3; }).attr("y", barHeight / 2).attr("dy", ".35em").text(function(d) { return d; });
+
+            //
+            //SVG chart 2 - donwloading .tsv file for data
+            //
+            var x2 = d3.scale.linear().range([0, width]);
+
+            var chart3 = d3.select("#chart3").attr("width", width);
+
+            d3.tsv("/assets/data.tsv", type, function(error, data) {
+
+                alert('data.tsv downloaded');
+
+                x2.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+                chart3.attr("height", barHeight * data.length);
+
+                var bar3 = chart3.selectAll("g").data(data).enter().append("g").attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+                bar3.append("rect").attr("width", function(d) { return x(d.value) }).attr("height", barHeight - 1);
+
+                bar3.append("text").attr("x", function(d) { return x(d.value) - 3; }).attr("y", barHeight / 2).attr("dy", ".35em").text(function(d) { return d.value; });
+
+            });
+
+            function type(d) {
+                d.value = +d.value; //coerce to number
+                return d;
+            }
+
+        });
+
+        </script>
+
+    <!-- END SCRIPTS -->
+
+
+
+
+    </body>
+</html>
+
+
+
+
+
+
