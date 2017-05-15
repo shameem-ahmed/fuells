@@ -2,6 +2,8 @@ var apiUrl = "http://localhost:5000/";
 
 var token = localStorage.getItem("fuelUser");
 
+var isAdmin = false;
+
 //if (token) {
 //    $.ajaxSetup({
 //        headers: {
@@ -20,6 +22,8 @@ var fuLib = {
                 fuLib.user.getLogin().success(function(user, status, xhr) {
 
                     if (user) {
+
+                        isAdmin = user.isAdmin;
 
                         $("#profileName").text(user.name);
                         $("#profileRole").text(user.isAdmin ? "Administrator" : "Not Admin");
@@ -68,20 +72,33 @@ var fuLib = {
             );
         }
     },
+
     user: {
 
         jwtToken: token,
 
         getAll: function() {
-            return [
-                {id: "101", name: "Shameem" },
-                {id: "102", name: "Mahesh" },
-                {id: "103", name: "Saravanan" }
-            ]
+            return (
+                $.ajax({
+                    url: apiUrl + "user/getall",
+                    type: "GET",
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                })
+            );
         },
 
         getOne: function(id) {
-            return {id: "103", name: "Saravanan" }
+            return (
+                $.ajax({
+                    url: apiUrl + "user/getone/" + id,
+                    type: "GET",
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                })
+            );
         },
 
         getLogin: function() {
@@ -136,7 +153,15 @@ var fuLib = {
         },
 
         getOne: function(id) {
-            return {id: "103", name: "Madurai" }
+            return (
+                $.ajax({
+                    url: apiUrl + "lov/getone/" + id,
+                    type: "GET",
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                })
+            );
         }
     },
 }
